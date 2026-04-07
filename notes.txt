@@ -1,8 +1,7 @@
 I love potato
 I love pizza
 I love ice-cream
+I love apple
 I love bananas
-I love watermelons
-I hate potato
-
-final change
+I love chips
+I love ice
