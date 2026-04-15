@@ -236,9 +236,48 @@
 
 
 //method overriding
+// public class main1{
+//     public static void main(String[] args)
+//     {
+//         Dog dog = new Dog();
+//         Cat cat = new Cat();
+//         Fish fish = new Fish();
+
+//         dog.move();
+//         cat.move();
+//         fish.move();
+//     }
+// }
+
+
+
+// public class main1{
+//     public static void main(String[] args)
+//     {
+//         Car car1 = new Car("Ford", "Mustang", 2025, "Red");
+//         Car car2 = new Car("Chevrolette", "Corvette", 2026, "Blue");
+//         System.out.println(car1);
+//         System.out.println(car2);
+//     }
+// }
+
+
+
+
 public class main1{
     public static void main(String[] args)
     {
-        //
+        //Abstract
+        Circle circle = new Circle(3);
+        Triangle triangle = new Triangle(4,5);
+        Rectangle rectangle = new Rectangle(6,7);
+
+        circle.display();
+        triangle.display();
+        rectangle.display();
+
+        System.out.println(circle.area());
+        System.out.println(triangle.area());
+        System.out.println(rectangle.area());
     }
 }
