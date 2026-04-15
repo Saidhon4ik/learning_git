@@ -1,10 +1,15 @@
 public class Car {
+    String make;
     String model;
     String color;
+    int year;
 
-    Car(String model, String color)
+
+    Car(String make, String model, int year, String color)
     {
+        this.make = make;
         this.model = model;
+        this.year = year;
         this.color = color;
     }
 
@@ -16,5 +21,11 @@ public class Car {
         void brake()
     {
         System.out.println("You stopped the " + this.color + " "  + this.model);
+    }
+
+    @Override
+    public String toString()
+    {
+        return this.color + " " + this.year + " " +this.make + " " + this.model;
     }
 }
