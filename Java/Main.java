@@ -302,23 +302,54 @@
 // }
 
 
+// public class Main{
+//     public static void main(String[] args)
+//     {
+//         //Polymorphysm
+//         Caar caar = new Caar();
+//         Boat boat = new Boat();
+//         Bike bike = new Bike();
+
+//         bike.go();
+//         caar.go();
+//         boat.go();
+
+//         Vehicle[] vehicles = {caar,bike , boat};
+
+//         for(Vehicle vehicle : vehicles)
+//         {
+//             vehicle.go();
+//         }
+//     }
+// }
+
+import java.util.Scanner;
 public class Main{
     public static void main(String[] args)
     {
-        //Polymorphysm
-        Caar caar = new Caar();
-        Boat boat = new Boat();
-        Bike bike = new Bike();
+        Scanner scanner = new Scanner(System.in);
 
-        bike.go();
-        caar.go();
-        boat.go();
+        Aniimal aniimal;
 
-        Vehicle[] vehicles = {caar,bike , boat};
+        System.out.print("Would you like a dog or a cat?(1 = dog, 2 = cat): ");
+        int choice = scanner.nextInt();
 
-        for(Vehicle vehicle : vehicles)
+        if(choice == 1)
         {
-            vehicle.go();
+            aniimal = new D0g();
+            aniimal.speak();
         }
+        else if(choice == 2)
+        {
+            aniimal = new Kitty();
+            aniimal.speak();
+        }
+        else
+        {
+            System.out.println("You have to choose 1 or 2, please");
+        }
+
+
+        scanner.close();
     }
 }
