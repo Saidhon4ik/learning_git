@@ -615,35 +615,35 @@
 //How to read a file
 
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-public class Main{
-    public static void main(String[] args)
-    {
-        //three ways to read a file:
-        //Buffered Reader + File Reader: best for reading text line by line
-        //FileInoutStream : best for binary files(e.g images, audio files)
-        //RandomAccessFile: Best for read write speicific portion of  a large text
+// import java.io.BufferedReader;
+// import java.io.FileNotFoundException;
+// import java.io.FileReader;
+// import java.io.IOException;
+// public class Main{
+//     public static void main(String[] args)
+//     {
+//         //three ways to read a file:
+//         //Buffered Reader + File Reader: best for reading text line by line
+//         //FileInoutStream : best for binary files(e.g images, audio files)
+//         //RandomAccessFile: Best for read write speicific portion of  a large text
         
-        String filePath = "C:\\Users\\Saidkhon\\Desktop\\test.txt";
-        try(BufferedReader reader = new BufferedReader(new FileReader(filePath));)
-        {
-            String  line;
-            while ((line = reader.readLine())!= null) {
-                System.out.println(line);
-            }
-        }
-        catch(FileNotFoundException e)
-        {
-            System.out.println("Could not find a file");
-        }
+//         String filePath = "C:\\Users\\Saidkhon\\Desktop\\test.txt";
+//         try(BufferedReader reader = new BufferedReader(new FileReader(filePath));)
+//         {
+//             String  line;
+//             while ((line = reader.readLine())!= null) {
+//                 System.out.println(line);
+//             }
+//         }
+//         catch(FileNotFoundException e)
+//         {
+//             System.out.println("Could not find a file");
+//         }
 
-        catch(IOException exception)
-        {
-            System.out.println("Something went wrong");
-        }
+//         catch(IOException exception)
+//         {
+//             System.out.println("Something went wrong");
+//         }
     
-    }
-}
+//     }
+// }
