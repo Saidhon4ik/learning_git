@@ -468,3 +468,67 @@
 //         System.out.println(x);
 //     }
 // }
+
+
+
+
+
+
+
+// //Arraylist
+
+// import java.util.ArrayList;
+// import java.util.Collections;
+// public class Main{
+//     public static void main(String[] args)
+//     {
+//         //Arraylist
+//         ArrayList<String> list = new ArrayList<>();
+//         list.add("potato");
+//         list.add("Apple");
+//         list.add("Banana");
+
+//         // list.remove(1);
+
+//         list.set(0, "Pineapple");
+
+//         System.out.println(list);
+//         // System.out.println(list.get(2));
+//         // System.out.println(list.size());
+
+
+//         Collections.sort(list);
+//         System.out.println(list);
+//     }
+// }
+
+//exercise for ArrayList
+
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args)
+    {
+        int numOfFruit;
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<String> foods = new ArrayList<>();
+        System.out.print("Enter the number of food you would like: ");
+        numOfFruit = scanner.nextInt();
+        scanner.nextLine();
+
+        for(int i = 1; i <= numOfFruit; i++)
+        {
+            System.out.print("Enter food #" + i + " : ");
+            String food = scanner.nextLine();
+            foods.add(food);
+        }   
+
+        for(String food: foods)
+        {
+            System.out.println(food);
+        }
+
+        scanner.close();
+    }
+}
