@@ -570,41 +570,80 @@
 
 
 
-//Writing files
+// //Writing files
 
+// import java.io.FileNotFoundException;
+// import java.io.FileWriter;
+// import java.io.IOException;
+
+// public class Main {
+//     public static void main(String[] args)
+//     {
+//         //FileWriter = small - medium files
+//         //Buffered Writer = for large files
+//         //Print Writed =  best for structured data, like logs or reports
+//         //FileOutputStream = Best for binary files(e.g photos, images, audio files)
+
+//         // String filePath;
+//         // String textContent = "I like pizza \n It is really good";
+//         String textContent = """
+//                 Roses are red
+//                 Violets are blue
+//                 Why do i have such a head
+//                 I have no clue🤣
+//                 """;
+
+//         try(FileWriter writer = new FileWriter("test.txt");)
+//         {
+//             writer.write(textContent);
+//             System.out.println("File has been written!");
+//         }
+        
+//         catch(FileNotFoundException e)
+//         {
+//             System.out.println("Could not locate file location!");
+//         }
+//         catch(IOException e){
+//             System.out.println("Could not write file");
+//         }
+//     }
+// }
+
+
+
+
+//How to read a file
+
+
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
+import java.io.FileReader;
 import java.io.IOException;
-
-public class Main {
+public class Main{
     public static void main(String[] args)
     {
-        //FileWriter = small - medium files
-        //Buffered Writer = for large files
-        //Print Writed =  best for structured data, like logs or reports
-        //FileOutputStream = Best for binary files(e.g photos, images, audio files)
-
-        // String filePath;
-        // String textContent = "I like pizza \n It is really good";
-        String textContent = """
-                Roses are red
-                Violets are blue
-                Why do i have such a head
-                I have no clue🤣
-                """;
-
-        try(FileWriter writer = new FileWriter("test.txt");)
-        {
-            writer.write(textContent);
-            System.out.println("File has been written!");
-        }
+        //three ways to read a file:
+        //Buffered Reader + File Reader: best for reading text line by line
+        //FileInoutStream : best for binary files(e.g images, audio files)
+        //RandomAccessFile: Best for read write speicific portion of  a large text
         
+        String filePath = "C:\\Users\\Saidkhon\\Desktop\\test.txt";
+        try(BufferedReader reader = new BufferedReader(new FileReader(filePath));)
+        {
+            String  line;
+            while ((line = reader.readLine())!= null) {
+                System.out.println(line);
+            }
+        }
         catch(FileNotFoundException e)
         {
-            System.out.println("Could not locate file location!");
+            System.out.println("Could not find a file");
         }
-        catch(IOException e){
-            System.out.println("Could not write file");
+
+        catch(IOException exception)
+        {
+            System.out.println("Something went wrong");
         }
+    
     }
 }
