@@ -402,6 +402,7 @@
 
 public class Main{
     public static void main(String[] args)
+    //composition - "part-of" relationship
     {
         Caaaar caaaar = new Caaaar("Corvette", 2025, "V8");
 
